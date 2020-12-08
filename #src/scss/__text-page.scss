@@ -1,0 +1,35 @@
+.text-page {
+    padding-bottom: 2em;
+    color: #000;
+    .title {
+        font-size: 2em;
+        font-weight: 500;
+        margin: .5em 0 1em;
+    }
+    .text-block {
+        margin-bottom: 2em;
+    }
+    .text-list {
+        margin-left: 1.5em;
+        margin-bottom: 2em;
+        li {
+            list-style-type: none;
+            &::before {
+                color: #3da7ea;
+                content: '\2022';
+                padding-right: 10px;
+            }
+        }
+    }
+    .text-important {
+        font-size: 1.5em;
+        margin-top: 10em;
+    }
+    strong {
+        font-size: 1.4em;
+    }
+    em {
+        display: block;
+        padding: 2em 0 2em 2.5em;
+    }
+}

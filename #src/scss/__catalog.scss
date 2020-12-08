@@ -1,0 +1,96 @@
+/* Catalog */
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.widget {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+    .list-item {
+        font-size: 1.1em;
+        position: relative;
+        padding-right: 1em;
+        cursor: pointer;
+        img.rotate-180 {
+            transform: rotate(180deg);
+        }
+    }
+    @media screen and ( max-width: 1165px) {
+        margin-top: 20px;
+        .list--sort .list-item {
+            margin-right: 1.2em;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    @media screen and ( max-width: 710px) {
+        flex-direction: column-reverse;
+        text-align: center;
+        .list--sort {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .count-products {
+            padding-bottom: .5em;
+        }
+        .list-item {
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
+    }
+}
+
+.wrapper-content {
+    margin-top: 2em;
+    display: flex;
+    @media screen and ( max-width: 1165px) {
+        margin-top: 1em;
+        flex-direction: column;
+    }
+}
+
+.wrapper-catalog {
+    width: 100%;
+    margin-left: 2em;
+    color: #000;
+    .widget {
+        margin-bottom: 1.5em;
+    }
+    .catalog-content {
+        @include grid(3, 3, 30px);
+        grid-gap: 20px 30px;
+    }
+    .catalog-item {
+        position: relative;
+    }
+    .list--page {
+        margin: 2em 0;
+    }
+    @media screen and ( max-width: 1165px) {
+        margin-left: 0em;
+        .catalog-content {
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            .catalog-item:last-child {
+                display: none;
+            }
+        }
+    }
+    @media screen and ( max-width: 710px) {
+        .catalog-content {
+            grid-template-rows: repeat(8, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .list--page {
+            justify-content: center;
+            margin: 2em 0;
+        }
+    }
+}
+
+
+/* Sidebar */

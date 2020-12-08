@@ -1,0 +1,104 @@
+/* Header */
+
+.header {
+    width: 100%;
+    padding: 2em 0;
+    &__nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media screen and (max-width: 1250px) {
+        &__nav {
+            flex-wrap: wrap;
+        }
+        &__nav-item {
+            flex-basis: 33.3333%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        &__nav-item:nth-child(2),
+        &__nav-item:nth-child(3) {
+            flex-basis: 100%;
+            margin-top: 1em;
+            text-align: center;
+        }
+        &__nav-item:nth-child(2) {
+            order: 2;
+        }
+        &__nav-item:nth-child(3) {
+            order: 4;
+            margin-top: 2em;
+        }
+    }
+    @media screen and (max-width: 930px) {
+        &__nav-item {
+            flex-basis: 50%;
+        }
+        &__nav-item:nth-child(4) {
+            order: 1;
+            flex-basis: 100%;
+            margin-top: 1em;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        &__location select {
+            font-size: 1em;
+        }
+        &__img {
+            transform: scale(.8);
+            margin-right: .5em;
+        }
+        &__basket .basket__title {
+            display: none;
+        }
+    }
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    &__img {
+        margin-right: 1em;
+    }
+    &__select {
+        background: none;
+        color: #ffffff;
+        font-size: 1.5em;
+        font-family: 'Ubuntu', sans-serif;
+        border: none;
+        border-bottom: 1px dashed $blue;
+    }
+    &__option {
+        color: #1e1e1e;
+    }
+}
+
+.contact-question {
+    &__number {}
+    &__title {
+        font-size: .8em;
+    }
+}
+
+.link-number {}
+
+.basket {
+    display: flex;
+    align-items: center;
+    &__img {
+        margin-right: 1em;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {}
+    &__count {
+        white-space: nowrap;
+        color: $blue;
+        border-bottom: 1px solid $blue;
+    }
+}

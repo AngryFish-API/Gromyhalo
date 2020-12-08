@@ -1,0 +1,28 @@
+@keyframes btn-hide {
+    0% {
+        opacity: 0;
+        bottom: -20%;
+        border-radius: 0;
+    }
+    40% {
+        border-radius: 0;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes live-gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Громыхало</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    @@include('__header.html')
+    <!-- /Header -->
+    <main class="main-white">
+        <div class="container">
+            <div class="contact">
+
+                <!-- Breadcrub -->
+                <div class="wrapper-breadcrumb">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="link" href="index.html">Главная</a></li>
+                            <li class="breadcrumb-item"><a class="link" href="catalog.html">Каталог</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- /Breadcrub -->
+
+                <!-- Contacts -->
+                <article class="wrapper-company-info">
+                    <h1 class="title">Контакты</h1>
+                    <div class="company-info__inner">
+
+                        <div>
+                            <address class="address">
+                                <p class="text-bold">г. Владивосток, пр-т. Красного Знамени, 1</p>
+                                <p class="text-bold">Режим работы: <span class="text-normal">ежедневно с 9:00 до
+                                        18:00</span></p>
+                                <p class="text-bold">E-mail:<a href="mailto:mail@mail.ru" class="link"> mail@mail.ru</a>
+                                </p>
+                            </address>
+                            <div class="contact__inner">
+                                <div class="contact-item">
+                                    <img class="contact-img" src="img/icons/phone.png" alt="Телефон">
+                                    <a class="link link-number" href="tel:79147053513">+7 914 705 35 13</a>
+                                </div>
+
+                                <div class="contact-item">
+                                    <img class="contact-img" src="img/icons/whatsapp.png" alt="WhatsApp">
+                                    <a class="link link-number" href="tel:79147053513">+7 914 705 35 13</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map" id="map">
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa4cd91a59080da752895b9f8e0b4fa1cd6922dcc1cb40889ee569f2f272618ec&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    @@include('__footer.html')
+    <!-- /Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>

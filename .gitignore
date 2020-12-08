@@ -1,0 +1,10 @@
+# Конфигурации редактора
+.editorconfig
+
+# Вспомогающие модули
+node_modules
+
+package-lock.json
+
+# Собранный проект
+dist
