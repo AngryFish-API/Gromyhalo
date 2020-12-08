@@ -69,7 +69,7 @@
         font-size: 1.5em;
         font-family: 'Ubuntu', sans-serif;
         border: none;
-        border-bottom: 1px dashed $blue;
+        border-bottom: 1px dashed $blue-1;
     }
     &__option {
         color: #1e1e1e;
@@ -98,7 +98,7 @@
     &__title {}
     &__count {
         white-space: nowrap;
-        color: $blue;
-        border-bottom: 1px solid $blue;
+        color: $blue-1;
+        border-bottom: 1px solid $blue-1;
     }
 }
