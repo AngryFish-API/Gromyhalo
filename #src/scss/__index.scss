@@ -27,7 +27,7 @@
         transform: translate(-50%, -50%);
         opacity: 0;
     }
-    @media screen and ( max-width: 1165px) {
+    @media screen and (max-width: 1165px) {
         height: 500px;
         .intro-title {
             font-size: 3.75em;
@@ -39,7 +39,7 @@
             transform: translateY(200%);
         }
     }
-    @media screen and ( max-width: 710px) {
+    @media screen and (max-width: 710px) {
         .intro-title {
             font-size: 2.25em;
         }
@@ -48,7 +48,7 @@
 
 .wrapper-catalog--demo {
     padding: 3em 0 5em;
-    background: url('../img/background/background-catalog.jpg') no-repeat center 100%;
+    background: url("../img/background/background-catalog.jpg") no-repeat center 100%;
     background-size: cover;
     color: #000;
     .title {
@@ -56,14 +56,12 @@
     }
     .catalog-content {
         margin: 60px 0 50px;
-        @include grid(2,
-        4,
-        30px);
+        @include grid(2, 4, 30px);
     }
     .catalog-item {
         background: #fff;
     }
-    @media screen and ( max-width: 1165px) {
+    @media screen and (max-width: 1165px) {
         padding: 2em 0;
         .catalog-content {
             grid-gap: 20px;
@@ -79,8 +77,8 @@
             font-size: 1em;
         }
     }
-    @media screen and ( max-width: 710px) {
-        background: url('../img/background/background-catalog-min.jpg') no-repeat center 100%;
+    @media screen and (max-width: 710px) {
+        background: url("../img/background/background-catalog-min.jpg") no-repeat center 100%;
         background-size: contain;
         .catalog-content {
             grid-template-rows: repeat(4, 1fr);
@@ -102,18 +100,16 @@
     .catalog-content {
         padding: 4em 1.5em 1.5em;
         background: #fff;
-        @include grid(1,
-        4,
-        30px);
+        @include grid(1, 4, 30px);
     }
     .title {
         position: absolute;
-        top: -.7em;
-        left: .7em;
-        padding: 0 .4em;
+        top: -0.7em;
+        left: 0.7em;
+        padding: 0 0.4em;
         background: #fff;
     }
-    @media screen and ( max-width: 1165px) {
+    @media screen and (max-width: 1165px) {
         padding-bottom: 1.5em;
         .border-gradient {
             margin-bottom: 1em;
@@ -130,7 +126,7 @@
             }
         }
     }
-    @media screen and ( max-width: 710px) {
+    @media screen and (max-width: 710px) {
         .container {
             text-align: center;
             display: flex;
@@ -163,11 +159,10 @@
     }
 }
 
-
 /* About Company */
 
 .company {
-    background: url('../img/background/background-company.jpg') no-repeat center 100%#011049;
+    background: url("../img/background/background-company.jpg") no-repeat center 100%#011049;
     background-size: cover;
     color: #fff;
     padding: 0 15px;
@@ -194,7 +189,7 @@
             margin-right: 2em;
         }
     }
-    @media screen and ( max-width: 1165px) {
+    @media screen and (max-width: 1165px) {
         .company__inner {
             justify-content: space-between;
             align-items: flex-start;
@@ -211,7 +206,7 @@
             }
         }
     }
-    @media screen and ( max-width: 710px) {
+    @media screen and (max-width: 710px) {
         background-image: none;
         text-align: center;
         .company__inner {
@@ -236,5 +231,76 @@
     }
     .btn-opacity {
         margin: 0 auto;
+    }
+}
+// New
+.about-company {
+    padding: 5em 0 2em;
+    background: url("../img/background/background-company.jpg") no-repeat center 100%#011049;
+    background-size: cover;
+    // .about-company__item
+    &__item {
+        margin-top: 2em;
+        flex-basis: 50%;
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // padding-right: 3em;
+            p {
+                margin-bottom: 2em;
+            }
+        }
+        &:last-child {
+            display: flex;
+            justify-content: center;
+            picture:first-child {
+                margin-right: 2em;
+            }
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        // .about-company__item
+        &__item {
+            flex-basis: 60%;
+            &:last-child {
+                flex-basis: 40%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                picture:first-child {
+                    margin-right: 0em;
+                    margin-bottom: 2em;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 780px) {
+        padding: 2em 0;
+        text-align: center;
+        // .about-company__item
+        &__item {
+            flex-basis: 100%;
+            &:last-child {
+                flex-basis: 100%;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                picture:first-child {
+                    margin-right: 2em;
+                    margin-bottom: 0em;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 400px) {
+        // .about-company__item
+        &__item:last-child {
+            picture:first-child {
+                margin-right: 0em;
+                margin-bottom: 2em;
+            }
+            flex-direction: column;
+        }
     }
 }
