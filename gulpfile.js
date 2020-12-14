@@ -51,7 +51,7 @@ function browserSync(params) {
 function html() {
     return src(path.src.html)
         .pipe(fileinclude())
-        .pipe(webphtml())
+        // .pipe(webphtml())
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
@@ -99,13 +99,13 @@ function js() {
 
 function images() {
     return src(path.src.img)
-        .pipe(
-            webp({
-                quality: 70
-            })
-        )
-        .pipe(dest(path.build.img))
-        .pipe(src(path.src.img))
+        // .pipe(
+        //     webp({
+        //         quality: 70
+        //     })
+        // )
+        // .pipe(dest(path.build.img))
+        // .pipe(src(path.src.img))
         .pipe(
             imagemin({
                 progressive: true,
@@ -115,6 +115,12 @@ function images() {
             })
         )
         .pipe(dest(path.build.img))
+        .pipe(browsersync.stream())
+}
+
+function loc() {
+    return src('loc/**')
+        .pipe(dest('dist/loc'))
         .pipe(browsersync.stream())
 }
 
@@ -129,7 +135,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, loc));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.images = images;
@@ -139,3 +145,4 @@ exports.html = html;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
+exports.loc = loc;
